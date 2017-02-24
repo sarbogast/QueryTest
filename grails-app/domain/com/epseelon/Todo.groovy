@@ -4,12 +4,12 @@ class Todo {
     String task
 
     static belongsTo = [
-            list: TodoList,
-            project: Project
+            parentList: TodoList,
+            parentProject: Project
     ]
 
     static constraints = {
-        list nullable: true
-        project nullable: true
+        parentList nullable: true
+        parentProject nullable: true
     }
 }

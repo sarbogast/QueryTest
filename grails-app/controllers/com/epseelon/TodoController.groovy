@@ -14,7 +14,7 @@ class TodoController {
         params.max = Math.min(max ?: 10, 100)
         if(type) {
             def todoQuery = Todo.where {
-                project.type == type || list.project.type == type
+                parentProject.type == type || parentList.parentProject.type == type
             }
             respond todoQuery.list(params), model: [todoCount: todoQuery.count()]
         } else {

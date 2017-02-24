@@ -4,7 +4,7 @@ class TodoList {
     String title
 
     static belongsTo = [
-            project: Project
+            parentProject: Project
     ]
 
     static hasMany = [
